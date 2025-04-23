@@ -1,0 +1,28 @@
+//
+//TCRT5000 sensor example
+//written by Ted Burke - last updated 12 Feb 2025
+//
+
+void setup()
+{
+pinMode(4, OUTPUT);
+Serial.begin(9600); // open a serial link to PC at 9600 bits/s
+}
+
+void loop()
+{
+int sensorVoltage; // photosensor voltage
+
+sensorVoltage = analogRead(3); // read voltage from pin A3 as a number between 0 and 1023
+
+Serial.println(sensorVoltage);
+
+if (sensorVoltage > 512)
+{
+  digitalWrite(4, HIGH); //LED on
+}
+else
+{
+  digitalWrite(4, LOW); //LED off
+}
+}
