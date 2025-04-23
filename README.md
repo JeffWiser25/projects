@@ -1,4 +1,4 @@
-# projects
+# projects - Daryl Sweeney - Electrical and control engineering - TU705
 a collection of my different project codes:
 # project_1: The Robosimo: Johnny705 - robot car
 The car goes around a track, with different colours. It uses the colours to guide itself. It being the predecessor to the Robosumo project.
