@@ -1,0 +1,11 @@
+HOW TO USE "py.script"
+--------------------------------------------------
+1.Connect the Arduino to your computer via USB.
+
+2.Run the Python Script.
+
+3.The script will create a new log file and start collecting data from the Arduino.
+
+4.It will log the data and print it to the console in real-time.
+
+5.You can stop the script by pressing Ctrl + C.
