@@ -1,0 +1,34 @@
+//Tu705/2
+//group B
+//Daryl Sweeney
+//c22718249
+//12/02/2025
+//class code originally written by gavin duffy
+
+
+
+int analogPin = A3; // potentiometer wiper (middle terminal) connected to analog pin 3
+                        // outside leads to ground and +5V
+    int val = 0;  // variable to store the value read
+    float m = 17.052;//slope(m)
+    float c = 345.2;//line intersection
+    float T =0.0;//Temperature set
+    
+    void setup() { 
+      Serial.begin(9600);           //  setup serial
+    }
+
+    void loop() {
+      val = analogRead(analogPin);  // read the input pin
+      Serial.println(val);          // debug value
+      //Rescale y = mx + c
+      //A/D = mT + c
+      //T = (A/D - c)/m
+      T =(val - c)/m;
+      Serial.print("Temperature =  ");
+      
+      Serial.print(T);
+      Serial.println("degrees Celsius");
+      delay(1000);
+
+    }
